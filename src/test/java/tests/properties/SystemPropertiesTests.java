@@ -39,18 +39,26 @@ public class SystemPropertiesTests {
     }
 
     @Test
-    @Tag("Test6")
+    @Tag("test6")
     void someTest6() {
-        String browser = System.getProperty("browser", "chrome");
+        String browser = System.getProperty("browser", "firefox");
         String version = System.getProperty("version", "101");
         String browserSize = System.getProperty("browserSize", "1920x1080");
 
-        System.out.println(browser); // chrome
+        System.out.println(browser); // firefox
         System.out.println(version); // 101
         System.out.println(browserSize); // 1920x1080
 
         /*
         launch test in terminal: gradle clean properties_test6
          */
+    }
+
+    @Test
+    @Tag("hello")
+    void someTest7() {
+        System.out.println("Hello " + System.getProperty("anyText"));
+
+        // launch test in terminal: gradle clean hello_test -DanyText=world!
     }
 }
