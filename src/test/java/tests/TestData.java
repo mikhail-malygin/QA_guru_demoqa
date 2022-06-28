@@ -1,4 +1,4 @@
-package tests.demoqa;
+package tests;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.github.javafaker.Faker;
