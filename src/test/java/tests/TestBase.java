@@ -31,6 +31,7 @@ public class TestBase {
 
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
+        System.out.println("format: = " + format("https://%s:%s@%s", login, password, System.getProperty("selenoidStand")));
         Configuration.remote = format("https://%s:%s@%s", login, password, System.getProperty("selenoidStand"));
 
         Configuration.browserCapabilities = capabilities;
