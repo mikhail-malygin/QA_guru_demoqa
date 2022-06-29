@@ -64,6 +64,12 @@ task owner_test(type: Test) {
     }
 }
 
+task demoQa_test(type: Test) {
+    useJUnitPlatform{
+        includeTags "demoQa"
+    }
+}
+
 task hello_test(type: Test) {
     useJUnitPlatform {
         includeTags "hello"
