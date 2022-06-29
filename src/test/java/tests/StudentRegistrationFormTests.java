@@ -1,10 +1,10 @@
-package tests.demoqa;
+package tests;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
-import static tests.demoqa.TestData.*;
+import static tests.TestData.*;
 
 public class StudentRegistrationFormTests extends TestBase {
 
