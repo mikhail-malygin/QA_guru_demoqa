@@ -30,7 +30,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true); // запись видео теста, записывается на сервер селеноида
 
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("version", "100");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100");
         Configuration.browserSize = System.getProperty("resolution", "1920х1080");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.remote = format("https://%s:%s@%s", login, password, System.getProperty("selenoidStand"));
