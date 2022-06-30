@@ -29,15 +29,15 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true); // включение потовокого вещание видео
         capabilities.setCapability("enableVideo", true); // запись видео теста, записывается на сервер селеноида
 
-        Configuration.browser = System.getProperty("browser");
-        //Configuration.browserVersion = System.getProperty("version");
-        Configuration.browserSize = System.getProperty("resolution");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("version", "100");
+        Configuration.browserSize = System.getProperty("resolution", "1920х1080");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.remote = format("https://%s:%s@%s", login, password, System.getProperty("selenoidStand"));
 
-        System.out.println("browser = " + System.getProperty("browser"));
-        System.out.println("browserVersion = " + System.getProperty("version"));
-        System.out.println("browserSize = " + System.getProperty("resolution"));
+        System.out.println("browser = " + System.getProperty("browser", "chrome"));
+        System.out.println("browserVersion = " + System.getProperty("version", "100"));
+        System.out.println("browserSize = " + System.getProperty("resolution", "1920х1080"));
         System.out.println("remote = " + format("https://%s:%s@%s", login, password, System.getProperty("selenoidStand")));
 
         Configuration.browserCapabilities = capabilities;
