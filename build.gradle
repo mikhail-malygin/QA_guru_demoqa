@@ -29,7 +29,8 @@ dependencies {
             'org.junit.jupiter:junit-jupiter:5.8.2',
             'com.codeborne:selenide:6.4.0',
             'com.github.javafaker:javafaker:1.0.2',
-            'io.qameta.allure:allure-selenide:2.18.1'
+            'io.qameta.allure:allure-selenide:2.18.1',
+            'org.aeonbits.owner:owner:1.0.12'
     )
 }
 
@@ -54,6 +55,18 @@ tasks.withType(Test) {
 task properties_test6(type: Test) {
     useJUnitPlatform{
         includeTags "test6"
+    }
+}
+
+task owner_test(type: Test) {
+    useJUnitPlatform{
+        includeTags "owner"
+    }
+}
+
+task demoQa_test(type: Test) {
+    useJUnitPlatform{
+        includeTags "demoQa"
     }
 }
 
