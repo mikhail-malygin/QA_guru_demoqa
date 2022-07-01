@@ -28,6 +28,7 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true); // включение потовокого вещание видео
         capabilities.setCapability("enableVideo", true); // запись видео теста, записывается на сервер селеноида
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.remote = format("https://%s:%s@%s", login, password, System.getProperty("selenoidStand"));
 
